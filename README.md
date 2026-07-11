@@ -1,62 +1,57 @@
-How to host your Reel Studio on GitHub
+**Reel Studio Pro
+**
+Reel Studio is a high-quality, local-first React application designed for creators to script, visualize, and preview 20-second cinematic reels directly in the browser.
 
-Since your app is a React application, it requires a small "build" process to run on the web. Follow these steps to turn your code into a live GitHub website.
+Designed for speed and professional pacing, this tool eliminates the need for expensive AI APIs by using advanced local browser synthesis and custom audio processing to create a studio-like experience.
 
-1. File Format
+**Features**
 
-Save your main code file as App.jsx. This is the standard file format for React components.
+Cinematic Timeline: A strict, perfectly-paced 20-second sequence composed of 5 dynamic scenes.
 
-2. Create the Project
+Vocal Studio Engine: Implements advanced Web Audio API filters (dynamic compression and low-pass filtering) to transform flat, robotic system voices into warm, broadcast-quality narration.
 
-To make it work on GitHub, you need a project folder. Open your computer's terminal (or command prompt) and run these commands to set up the project:
+Project Export: A built-in "Export Project" feature that allows you to save your entire reel structure as a .json file for backup or later use in professional editing software.
 
-# 1. Create a new React project using Vite (the industry standard)
-npm create vite@latest reel-studio -- --template react
+Zero-Config: No API keys or external server dependencies are required. The app works instantly in your browser.
 
-# 2. Go into the folder
-cd reel-studio
+Responsive Preview: A realistic smartphone preview frame with kinetic zoom transitions and real-time subtitle syncing.
 
-# 3. Install the required dependencies (Lucide icons and Tailwind)
+Getting Started
+
+Prerequisites
+
+Node.js installed on your machine.
+
+A modern web browser (Chrome, Edge, or Firefox).
+
+Installation
+
+Clone this repository or download the source code.
+
+Open your terminal in the project folder and run:
+
 npm install
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-npm install lucide-react
 
 
-3. Add your Code
+Start the development server:
 
-Replace the contents of src/App.jsx with the code from your Reel Studio artifact.
-
-Configure Tailwind: Open tailwind.config.js and add this to the content array:
-content: ["./index.html", "./src//*.{js,ts,jsx,tsx}"],
-
-Update CSS: Open src/index.css and replace everything with these three lines:
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+npm run dev
 
 
-4. Upload to GitHub
+Open the local URL provided in your terminal (usually http://localhost:5173).
 
-Create a new repository on GitHub.com.
+Hosting
 
-Run these commands in your project folder:
+This project is optimized for GitHub Pages. Simply follow the deployment steps in your repository's "Settings > Pages" section to deploy your app for free.
 
-git init
-git add .
-git commit -m "Initial commit of Reel Studio"
-git branch -M main
-git remote add origin [YOUR_GITHUB_REPO_URL]
-git push -u origin main
+How to use
 
+Choose a Template: Select from our professional "Cyber," "Travel," or "Mindset" presets.
 
-5. Host it for Free
+Configure Voice: Use the "Vocal Studio" controls to select your system's best "Natural" or "Neural" voice.
 
-In your GitHub repository, go to Settings > Pages.
+Generate: Click the play button to initiate the 20-second cinematic sequence.
 
-Change "Source" to GitHub Actions.
+Export: Save your project settings locally for future creative work.
 
-Choose the Vite workflow.
-
-GitHub will automatically build your app and give you a live URL (like https://yourname.github.io/reel-studio) where your app will live!
+Built with React, Tailwind CSS, and Lucide Icons.
